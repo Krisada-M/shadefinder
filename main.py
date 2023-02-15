@@ -7,7 +7,6 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 from sklearn.cluster import KMeans
-from routers import ToolRoutes
 # uvicorn main:app --reload คำสั่งรัน API
 app = FastAPI()
 
@@ -189,5 +188,3 @@ async def root(file: UploadFile = File(...)):
     newColor = rgb_to_hex(rr, gg, bb)
 
     return {"color": newColor}
-
-app.include_router(ToolRoutes.router)

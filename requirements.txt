@@ -3,4 +3,3 @@ numpy
 opencv_python
 scikit_learn
 uvicorn
-Routes
