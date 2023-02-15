@@ -18,11 +18,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-current_path = os.path.abspath(os.getcwd())
+# current_path = os.path.abspath(os.getcwd())
 faceCascade = cv2.CascadeClassifier(
     'haarcascade_frontalface_default.xml')
-eyesCascade = cv2.CascadeClassifier(current_path+'\haarcascade_eye.xml')
-mouthCascade = cv2.CascadeClassifier(current_path+'\haarcascade_mouth.xml')
+eyesCascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+mouthCascade = cv2.CascadeClassifier('haarcascade_mouth.xml')
 
 master_colors = [
     (249, 222, 203), (241, 214, 193), (254, 212,
